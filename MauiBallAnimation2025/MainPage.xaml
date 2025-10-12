@@ -2,14 +2,16 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:drawable="clr-namespace:MauiBallAnimation2025"
-             x:Class="MauiBallAnimation2025.MainPage">
+             x:Class="MauiBallAnimation2025.MainPage"
+             Loaded="ContentPage_Loaded">
 
     <ContentPage.Resources>
-        <drawable:GraphicsDrawable x:Key="drawable" />
+        <drawable:GraphicsDrawable x:Key="ballField" />
     </ContentPage.Resources>
     <VerticalStackLayout>
-        <GraphicsView Drawable="{StaticResource drawable}"
-                      HeightRequest="300"
-                      WidthRequest="400" />
+        <GraphicsView Drawable="{StaticResource ballField}"
+                      x:Name="BallGraphicsView"
+                      HeightRequest="800"
+                      WidthRequest="1000" />
     </VerticalStackLayout>
 </ContentPage>

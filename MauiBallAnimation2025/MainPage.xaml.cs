@@ -1,14 +1,33 @@
-﻿namespace MauiBallAnimation2025
+﻿using System.Timers;
+using Timer = System.Timers.Timer;
+
+
+namespace MauiBallAnimation2025
 {
     public partial class MainPage : ContentPage
-    {
-        int count = 0;
 
+    {
+        private double milliSecondPerFrame = 30;
+        public Timer? timer;
         public MainPage()
         {
             InitializeComponent();
         }
 
+        private void ContentPage_Loaded(object sender, EventArgs e)
+        {
+            timer = new Timer();
+            timer.Interval = milliSecondPerFrame;
+            timer.Elapsed += new ElapsedEventHandler(updateBallField);
+            timer.Start();
+
+        }
+
+        private void updateBallField(object? sender, ElapsedEventArgs e)
+        {
+            var graphicsView = BallGraphicsView;
+            graphicsView.Invalidate();
         }
     }
+}
 
