@@ -8,10 +8,20 @@
     <ContentPage.Resources>
         <drawable:GraphicsDrawable x:Key="ballField" />
     </ContentPage.Resources>
-    <VerticalStackLayout>
+    <VerticalStackLayout Spacing="8" Padding="0,8">
+
+        <HorizontalStackLayout Spacing="12" Padding="12,0">
+            <Label Text="Speed" VerticalOptions="Center" />
+            <Entry x:Name="Speed" WidthRequest="60" Text="10" Keyboard="Numeric" TextChanged="Speed_TextChanged"/>
+            <Label Text="Balls" VerticalOptions="Center" />
+            <Entry x:Name="Balls" WidthRequest="60" Text="100" Keyboard="Numeric" TextChanged="Balls_TextChanged"/>
+            <Label Text="Milli" VerticalOptions="Center" />
+            <Entry x:Name="Milli" WidthRequest="60" Text="30"/>
+        </HorizontalStackLayout>
+        
         <GraphicsView Drawable="{StaticResource ballField}"
                       x:Name="BallGraphicsView"
-                      HeightRequest="800"
+                      HeightRequest="1000"
                       WidthRequest="1000" />
     </VerticalStackLayout>
 </ContentPage>

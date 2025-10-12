@@ -44,7 +44,7 @@ namespace MauiBallAnimation2025
             double minY = Radius; // top wall
             double maxY = height - Radius; // bottom wall
 
-            if (minX > maxX)
+            if (X < minX)
             {
                 double overshoot = minX - X;
                 X = minX + overshoot;
@@ -57,7 +57,7 @@ namespace MauiBallAnimation2025
                 XVel = -XVel;
             }
 
-            if (minY > maxY)
+            if (Y < minY)
             {
                 double overshoot = minY - Y;
                 Y = minY + overshoot;
