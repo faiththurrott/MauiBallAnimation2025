@@ -44,12 +44,12 @@ namespace MauiBallAnimation2025
 
         private void Balls_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (int.TryParse(Balls.Text, out var n))
+            if (int.TryParse(Balls.Text, out var balls))
             {
-                if (n < 1) n = 1;
-                if (n > 20000) n = 20000;
+                if (balls < 1) balls = 1;
+                if (balls > 20000) balls = 20000;
 
-                ((GraphicsDrawable)BallGraphicsView.Drawable).SetBallCount(n);
+                ((GraphicsDrawable)BallGraphicsView.Drawable).SetBallCount(balls);
                 BallGraphicsView.Invalidate();
             }
         }
