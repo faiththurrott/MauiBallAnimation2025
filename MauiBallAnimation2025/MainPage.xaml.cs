@@ -32,7 +32,7 @@ namespace MauiBallAnimation2025
 
         private void Speed_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (int.TryParse(Speed.Text, out var spd))
+            if (double.TryParse(Speed.Text, out var spd))
             {
 
                 //if (spd < 0) spd = 0;

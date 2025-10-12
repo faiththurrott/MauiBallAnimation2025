@@ -12,7 +12,7 @@ namespace MauiBallAnimation2025
        
 
         public int ballCount { get; set; } = 100;
-        public int ballSpeed { get; set; } = 10;
+        public double ballSpeed { get; set; } = 10;
         public double width { get; set; } = 1000;
         public double height { get; set; } = 1000;
         public GraphicsDrawable()

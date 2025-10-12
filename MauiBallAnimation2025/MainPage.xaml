@@ -16,7 +16,7 @@
             <Label Text="Balls" VerticalOptions="Center" />
             <Entry x:Name="Balls" WidthRequest="60" Text="100" Keyboard="Numeric" TextChanged="Balls_TextChanged"/>
             <Label Text="Milli" VerticalOptions="Center" />
-            <Entry x:Name="Milli" WidthRequest="60" Text="30"/>
+            <Entry x:Name="Milli" WidthRequest="60" Text="30" Keyboard="Numeric"/>
         </HorizontalStackLayout>
         
         <GraphicsView Drawable="{StaticResource ballField}"
